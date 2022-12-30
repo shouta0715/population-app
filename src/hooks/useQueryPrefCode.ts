@@ -4,11 +4,7 @@ import { PrefecturesApi } from "../types/api/api";
 import { Prefecture } from "../types/prefectures";
 
 const getPrefCode = async () => {
-  const { data } = await Axios.get<PrefecturesApi>(`/api/v1/prefectures`, {
-    headers: {
-      "X-API-KEY": `${import.meta.env.VITE_API_KEY}`,
-    },
-  });
+  const { data } = await Axios.get<PrefecturesApi>(`/api/v1/prefectures`);
 
   return data.result;
 };
