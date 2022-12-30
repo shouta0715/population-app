@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import { useQueryPrefCode } from "../../hooks/useQueryPrefCode";
 import { PrefectureItem } from "./PrefectureItem";
 
-export const Prefectures = () => {
+export const Prefectures: FC = () => {
   const { data } = useQueryPrefCode();
 
   return (

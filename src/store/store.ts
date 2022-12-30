@@ -1,10 +1,5 @@
 import create from "zustand";
-
-type PrefCodeState = {
-  prefCodeArray: number[];
-  add: (prefCode: number) => void;
-  remove: (prefCode: number) => void;
-};
+import { PrefCodeState } from "../types/prefectures";
 
 export const usePrefecture = create<PrefCodeState>((set, get) => ({
   prefCodeArray: [],
