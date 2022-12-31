@@ -19,14 +19,14 @@ export const MainChart = () => {
   const { getPrefName } = useGetPrefName();
 
   return (
-    <div>
+    <section>
       <ResponsiveContainer width="100%" height={800}>
         <LineChart
           margin={{
             top: 50,
             right: 30,
             left: 20,
-            bottom: 5,
+            bottom: 20,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
@@ -37,7 +37,7 @@ export const MainChart = () => {
               value: "年度",
               position: "right",
               dx: -20,
-              dy: 20,
+              dy: 15,
             }}
             domain={[1960, 2045]}
             tick={{
@@ -59,7 +59,16 @@ export const MainChart = () => {
           />
           <Tooltip />
           <LabelList dataKey="name" position="top" />
-          <Legend verticalAlign="top" height={36} />
+          <Legend
+            verticalAlign="top"
+            height={36}
+            wrapperStyle={{
+              padding: "10px 10px 10px 60px",
+              display: "block",
+              height: "auto",
+            }}
+            contentStyleType="circle"
+          />
           {result.map((data) => {
             if (!data.data || data.status !== "success") return null;
 
@@ -78,6 +87,6 @@ export const MainChart = () => {
           })}
         </LineChart>
       </ResponsiveContainer>
-    </div>
+    </section>
   );
 };
