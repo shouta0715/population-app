@@ -7,7 +7,7 @@ export const Prefectures: FC = () => {
 
   return (
     <div>
-      <ul className="grid grid-cols-[repeat(auto-fit,_minmax(96px,_1fr))] items-center justify-center md:gap-2">
+      <ul className="grid grid-cols-[repeat(auto-fit,_minmax(96px,_1fr))] items-center justify-center p-6 md:gap-2">
         {data?.map((prefecture) => (
           <PrefectureItem key={prefecture.prefCode} prefecture={prefecture} />
         ))}

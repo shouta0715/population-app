@@ -6,7 +6,7 @@ import { Prefectures } from "./prefecture/Prefectures";
 
 export const Main: FC = () => (
   <div>
-    <div className="container mx-auto p-6">
+    <div className="container mx-auto ">
       <Header />
       <Suspense fallback={<Loading />}>
         <Prefectures />
