@@ -3,4 +3,7 @@
 @tailwind utilities;
 
 @layer components {
+  html {
+    @apply min-h-screen w-screen;
+  }
 }
